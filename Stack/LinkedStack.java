@@ -2,10 +2,12 @@
  * Linked list implements a stack.
  */
 
+import java.util.NoSuchElementException;
+
 public class LinkedStack<T> {
-    private class ListNode<T> {
-        public T value;
-        public ListNode next;
+    private class ListNode {
+        T value;
+        ListNode next;
 
         public ListNode(T value, ListNode next) {
             this.value = value;
@@ -25,14 +27,7 @@ public class LinkedStack<T> {
     }
 
     public void push(T value) {
-        if (top == null) {
-            top = new ListNode(value);
-        } else {
-            ListNode node = new ListNode(value);
-            node.next = top;
-            top = node;
-        }
-
+        top = new ListNode(value, top);
         size += 1;
     }
 
@@ -46,7 +41,7 @@ public class LinkedStack<T> {
 
     public T pop() {
         if (size == 0) {
-            throw new NoSuchElementExcpetion();
+            throw new NoSuchElementException();
         }
 
         T value = top.value;
@@ -54,5 +49,19 @@ public class LinkedStack<T> {
         size -= 1;
 
         return value;
+    }
+
+    public static void main(String[] args) {
+        LinkedStack<Integer> stack = new LinkedStack<Integer>();
+        System.out.println(stack.size());
+        System.out.println(stack.isEmpty());
+        for (int i = 0; i < 10; i++) {
+            stack.push(i);
+        }
+        System.out.println(stack.size());
+        System.out.println(stack.isEmpty());
+        while (!stack.isEmpty()) {
+            System.out.print(stack.pop() + " ");
+        }
     }
 }
