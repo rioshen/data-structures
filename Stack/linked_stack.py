@@ -4,6 +4,7 @@
 An implementation of stack using linked list.
 """
 
+
 class ListNode:
     def __init__(self, value, next=None):
         self.value = value
@@ -31,13 +32,13 @@ class LinkedStack(object):
         self.size += 1
 
     def peek(self):
-        if not self.head:
+        if self.size == 0:
             raise AttributeError("Cannot peek from empty stack.")
         else:
             return self.head.value
 
     def pop(self):
-        if not self.head:
+        if self.size == 0:
             raise AttributeError("Cannot pop from empty stack.")
 
         self.size -= 1
