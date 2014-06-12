@@ -29,3 +29,21 @@ A stack is a LIFO sequence. Addition and removal takes place only at one end, ca
 
 + Wrapper around the `list` (All operations in O(1))
 + Linked list (All operations in O(1))
+
+##Queue
+####The Basics
+A queue is a FIFO sequence. Addition takes place only at the tail, and removal takes place on at the head.
+
+####Operations
+
++ enqueue(x): add an item at the tail
++ dequeue(): remove the item at the head and return it
++ peek(): return the item at the head (without removing it)
++ size(): return the number of items in the queue
++ isEmpty(): return whether the queue is empty
+
+####Representations
+
++ Wrapper around the `java.util.LinkedList`
++ Array based, bounded or expandable (All operations in O(1))
++ Linked list (All operations in O(1))
