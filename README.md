@@ -47,3 +47,11 @@ A queue is a FIFO sequence. Addition takes place only at the tail, and removal t
 + Wrapper around the `java.util.LinkedList`
 + Array based, bounded or expandable (All operations in O(1))
 + Linked list (All operations in O(1))
+
+####Circular Array in Queue
+Use a circular array to insert and remove items from a queue in constant time is a common way to implement a queue. The idea of of a circular array is that the end of the array "wraps around" to the start of the array.
+
+The `mod` operator is used to calculate remainders:
+
++ The back of the queue is: `(tail + 1) % array.length`
++ The front of the queue is: `(head + 1) % array.length`
