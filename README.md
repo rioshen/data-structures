@@ -24,3 +24,8 @@ A stack is a LIFO sequence. Addition and removal takes place only at one end, ca
 + Wrapper around the `java.util.LinkedList`
 + Array based, bounded or expandable (All operations in O(1))
 + Linked list (All operations in O(1))
+
+####Representations in Python:
+
++ Wrapper around the `list` (All operations in O(1))
++ Linked list (All operations in O(1))
