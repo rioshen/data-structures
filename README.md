@@ -84,3 +84,12 @@ A binary tree is a tree data structure in which each node has at most two childr
 + preorder():
 + postorder():
 + levelorder():
+
+##Binary Search Tree
+####Operations
++ addElement(x): add a new element to the proper location in this tree
++ removeElement(x): removes and returns the specified element in this tree
++ removeMin(): removes and returns the smallest element in this tree
++ removeMax(): removes and returns the largest element in this tree
++ findMin(): returns the smallest element in this tree
++ findMax(): returns the largets element in this tree

@@ -17,11 +17,6 @@ public interface BinaryTree<E> {
      */
     public int size();
 
-    /**
-     * Returns a reference to the node if it is found, otherwise throws an
-     * exception if the specified element is not found.
-     */
-    public boolean find(E target);
 
     /**
      * Returns true is the target is found, otherwise returns false.
