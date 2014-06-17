@@ -11,7 +11,7 @@ A stack is a LIFO sequence. Addition and removal takes place only at one end, ca
 + pop: remove the item at the top and return it
 + peek: return the item at the top (without removing it)
 + size: return the number of items in the stack
-+ isEmpty: return whether the stack is empty
++ isEmpty: determine whether the stack is empty
 
 ####Usages:
 
@@ -40,7 +40,7 @@ A queue is a FIFO sequence. Addition takes place only at the tail, and removal t
 + dequeue(): remove the item at the head and return it
 + peek(): return the item at the head (without removing it)
 + size(): return the number of items in the queue
-+ isEmpty(): return whether the queue is empty
++ isEmpty(): determine whether the queue is empty
 
 ####Representations
 
@@ -71,7 +71,16 @@ A tree is a nonlinear data structure in which elements are organized into a hier
 
 `find` operation is O(logN). This is due to the fact that the height of such a tree will always be logN, where N is the number of elements in the tree.
 
-####Operations
+##Binary Tree
+A binary tree is a tree data structure in which each node has at most two children (refer to as the left and right child). Binary tree are used to implement binary search tree and binary heaps, and are used for efficient searching and sorting.
 
-+ contains(x): determines if the target is in the tree
-+ find(x): return the specific target if it is found
+####Operations
++ getRoot(): return a reference to the root of the binary tree
++ isEmpty(): determine whether the tree is empty
++ size(): return the number of nodes in the binary tree
++ contains(x): determine whether the specific target is in the tree
++ find(x): return a reference to the node if it is found
++ inorder():
++ preorder():
++ postorder():
++ levelorder():
