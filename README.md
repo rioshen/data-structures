@@ -93,3 +93,56 @@ A binary tree is a tree data structure in which each node has at most two childr
 + removeMax(): removes and returns the largest element in this tree
 + findMin(): returns the smallest element in this tree
 + findMax(): returns the largets element in this tree
+
+###Recursion in Tree
+Recursion comes from the algorithm technique [*Divide and Conquer*](http://en.wikipedia.org/wiki/Divide_and_conquer_algorithms), which generally means that some problems can be solved by two steps - Divide and Conquer.
+
+####Divide and Conquer
+Divide and Conquer is a technique to solve a problem by reducing it.
+
++ Divide: reduce the range of the problem to one in only half range each time.
++ Repeat this procedure (recursive)
++ Conquer: solve the smallest problem that is already known (base case)
+
+#####Example
+Given a sorted array like {1, 2, 3, 4, 5, 6....., 100}, check whehter 5 is in this array. To demonstrate how to solve it by using *Divide and Conquer*, first we follow the steps above.
+
++ Divide: Is the target (5) larger than 50 (half element)? if not, find it in the first halve , or find it in the second halve.
++ Repeat his procedure: Is the target larger than 25 or larger than 75
++ Conquer: if we've already visited the whole sub-array, return false
+
+```
+boolean contains(int[] array, int target, int low, int high) {
+    if (low > high) return false; // we've visited all node in the array.
+
+    int mid = array[(low + high) / 2];
+    if (target < mid) {
+        return contains(array, target, 0, mid - 1); // reduce
+    } else if (target > mid) {
+        return contains(array, target, mid + 1, high); // reduce
+    } else {
+        return true;
+    }
+}
+```
+####Recursion and Tree
+Recursion is generally appropriate and useful when we have a structure that has similar repeated structural form. A binary search tree consists of multiple subtrees which have a similar structure to a binary search tree.
+
+####Implementation and use of Recursive Algorithms
+Two things must happen in a recursive function:
+
++ The function must have a selection construct which caters for the base case
++ The recursive call must deal with a simpler/smaller version of the data
+
+#####Recursion vs Iteration
+
++ Both implement repetition
++ Iteration uses repetition construct - explicit
++ Recursion uses selection construct and achieves repetition through repeated function calls
++ Both involve a termination test
++ Recursion has a base case
++ Iteration has a loop condition
++ Both have the potential for endless looping
++ Any problem that can be solved recursively can be solved iteratively
++ Programmers often choose recursion when they can't see the iterative solution
++ Never choose recursion when performance is an issue.

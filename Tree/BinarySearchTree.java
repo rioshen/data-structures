@@ -67,12 +67,6 @@ public class BinarySearchTree<E extends Comparable<E>> implements BinarySearchTr
         }
     }
 
-    public void inorder() {
-        if (!isEmpty()) {
-
-        }
-    }
-
     private int compare(E x, E y) {
         return comparator == null ? x.compareTo(y) : comparator.compareTo(x, y);
     }
