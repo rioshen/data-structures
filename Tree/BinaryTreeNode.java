@@ -3,11 +3,12 @@
  * child and a right child.
  */
 public class BinaryTreeNode<E> {
-    protected E value;
-    protected BinaryTreeNode left, right;
+    E value;
+    BinaryTreeNode left, right;
 
     public BinaryTreeNode(E value) {
         this.value = value;
         this.left = this.right = null;
     }
+
 }

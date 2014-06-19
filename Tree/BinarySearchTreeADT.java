@@ -7,25 +7,25 @@ public interface BinarySearchTreeADT<E> extends BinaryTreeADT<E> {
     /**
      * Removes and returns the specified element in this tree.
      */
-    public T removeElement(E element);
+    public E removeElement(E element);
 
     /**
      * Removes and returns the smallest element in this tree.
      */
-    public T removeMin();
+    public E removeMin();
 
     /**
      * Removes and returns the largest element in this tree.
      */
-    public T removeMax();
+    public E removeMax();
 
     /**
      * Returns the smallest element in this tree.
      */
-    public T findMin();
+    public E findMin();
 
     /**
      * Returns the largest element in this tree.
      */
-    public T findMax();
+    public E findMax();
 }

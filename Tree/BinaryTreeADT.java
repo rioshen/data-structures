@@ -1,7 +1,7 @@
 /**
  * An implementation of Binary Tree interface.
  */
-public interface BinaryTree<E> {
+public interface BinaryTreeADT<E> {
     /**
      * Returns a reference to the root of the binary tree.
      */
