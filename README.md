@@ -146,3 +146,5 @@ Two things must happen in a recursive function:
 + Any problem that can be solved recursively can be solved iteratively
 + Programmers often choose recursion when they can't see the iterative solution
 + Never choose recursion when performance is an issue.
+
+##Sorting
