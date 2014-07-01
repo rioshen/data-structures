@@ -1,5 +1,8 @@
 Sorting
 =======
+###Sorting Definition
+Sorting is the process of arranging a group of items into a defined order, either descending or ascending, based on some criteria. Sorting algorithms generally divided into two categories: sequential sorts, which typically use a nested loops and require roughly n^2 comparisons to sort n elements and logarithmic sorts, which typically require roughly nlogn comparisons to sort n elements.
+
 ###Why we use sorting
 Many important problems can be reduced to sorting. An important algorithm design technique is to use sorting as a basic building block, because many other problems become easy once a set of items is sorted.
 + Searching - Binary search tests whether an item is in a dictionary in O(logN) time, provided the keys are sorted.
@@ -19,9 +22,15 @@ The right way to specify such matters to your sorting algorithm is with an appli
 
 ###Basic Sorting Algorithms
 ####Selection Sort
-Selection sort is specified an in-place comparison sort. It has O(N^2) time complexity. Selection is noted for its simplicity, it is useful when auxiliary memory is limited.
+The selection sort algorithm sorts a list of values by repetitively putting a particular value into its final, sorted, position.
 
-The algorithm divide the input into two parts: the sublist of items already sorted, which is built up from left to right at the front (left) of the list, and the sublist of items remaining to be sorted that occupy the rest of the list. Initially, the sorted sublist is empty and the unsorted sublist is the entire input list. The algorithm proceeds by finding the smallest (or largest, depending on sorting order) element in the unsorted sublist, exchanging it with the leftmost unsorted
+The general strategy of the selection algorithm is as follows:
++ Scan the entire list to find the smallest value.
++ Exchange that value with the value in the first position.
++ Scan the rest of the list to find the smallest value and then exchange it with the value in the second position of the list.
++ Continue this process for each position in the list.
+
+Selection sort is specified an in-place comparison sort. It has O(N^2) time complexity. Selection is noted for its simplicity, it is useful when auxiliary memory is limited.
 
 This more efficient variation of selection sort remembers the index of the smallest element that it finds in each pass. At the end of each pass it makes one exchange, if necessary. This is more efficient.
 ```
@@ -48,10 +57,15 @@ public void selection(int[] nums) {
 }
 ```
 
-####Insertion Sort
-The insertion sort algorithm sorts a list of values by repetitively inserting a particular value into a subset of the list that has already been sorted.
+The `selection sort` improves on the `bubble sort` by reducing the number of swaps necessary from O(N ^ 2) to O(N). The time complexity of `selection sort` is still O(N ^ 2), however, it is faster than `bubble sort` because it reduces the swap times.
 
-Sort the first two values in the list relative to each other by exchanging them if necessary. Insert the list’s third value into the appropriate position relative to the first two (sorted) values. Then insert the fourth value into its proper position relative to the first three values in the list. Each time an insertion is made, the number of values in the sorted subset in- creases by one. Continue this process until all values in the list are completely sorted.
+####Insertion Sort
+The _insertion sort_ algorithm sorts a list of values by repetitively inserting a particular value into a subset of the list that has already been sorted.
+
++ Sort the first two values in the list relative to each other by exchanging them if necessary.
++ Insert the list’s third value into the appropriate position relative to the first two (sorted) values.
++ Then insert the fourth value into its proper position relative to the first three values in the list.
++ Each time an insertion is made, the number of values in the sorted subset in- creases by one. Continue this process until all values in the list are completely sorted.
 
 ```
 public void insertion(int[] nums) {
@@ -75,7 +89,10 @@ public void insertion(int[] nums) {
 ####Quick Sort
 The quick sort algorithm sorts a list by partitioning the list using an arbitrarily chosen partition element and then recursively sorting the sublists on either side of the partition element.
 
-The general strategy of the quick sort algorithm is as follows: First, choose one element of the list to act as a partition element. Next, partition the list so that all elements less than the partition element are to the left of that element and all elements greater than the partition element are to the right. Finally, apply this quick sort strategy (recursively) to both partitions.
+The general strategy of the quick sort algorithm is as follows:
++ Choose one element of the list to act as a partition element.
++ Partition the list so that all elements less than the partition element are to the left of that element and all elements greater than the partition element are to the right.
++ Apply this quick sort strategy (recursively) to both partitions.
 
 ####Merge Sort
 The merge sort algorithm, another recursive sort algorithm, sorts a list by recursively dividing the list in half until each sublist has one element and then recombining these sublists in order.
