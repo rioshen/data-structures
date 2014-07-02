@@ -62,6 +62,8 @@ The `selection sort` improves on the `bubble sort` by reducing the number of swa
 ####Insertion Sort
 The _insertion sort_ algorithm sorts a list of values by repetitively inserting a particular value into a subset of the list that has already been sorted.
 
+Let's say we have an array of data, in the first step the array is unsorted, but we can say that it consists of two subsets: sorted and unsorted, where the first step the only item in the sorted subset is its first item.
+
 + Sort the first two values in the list relative to each other by exchanging them if necessary.
 + Insert the list’s third value into the appropriate position relative to the first two (sorted) values.
 + Then insert the fourth value into its proper position relative to the first three values in the list.
@@ -85,6 +87,13 @@ public void insertion(int[] nums) {
     }
 }
 ```
+
+####Partitioning
+Partitioning is the underlying mechanism of `quicksort`, but it's also a useful operation on its own.
+
+To partition data is to divide it into two groups, The merge sort algorithm, another recursive sort algorithm, sorts a list by recursively dividing the list in half until each sublist has one element and then recombining these sublists in order.
+
+The `pivot` value is the value used to determine into which of the two groups an item is placed. Items with a key value less than the pivot value go in the left part of the array, and those with a greater (or equal) key go in the right part.
 
 ####Quick Sort
 The quick sort algorithm sorts a list by partitioning the list using an arbitrarily chosen partition element and then recursively sorting the sublists on either side of the partition element.
