@@ -32,11 +32,8 @@ public class BinaryTreeTraversal {
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
         stack.push(root);
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            System.out.print(node.value + " ");
-            if (node.left != null) stack.push(node.left);
-            if (node.right != null) stack.push(node.right);
+        while (true) {
+
         }
     }
 
